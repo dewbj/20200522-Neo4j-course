@@ -1,7 +1,7 @@
 LOAD CSV WITH HEADERS
 FROM "FILE:///table_L6_train.csv" AS File
 FIELDTERMINATOR '\t'
-WITH File, apoc.text.split(apoc.text.replace(File.`#OTU ID`,'D_*._*',''),';') AS Text
+WITH File, apoc.text.split(apoc.text.replace(File.`#OTU ID`,'D_._*',''),';') AS Text
 WITH
     Text[0] AS D0,
     Text[1] AS D1,
