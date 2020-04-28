@@ -1,0 +1,1 @@
+match (:Sample)-[r]-(:Class) call apoc.refactor.setType(r,'sample_of') yield output return *
